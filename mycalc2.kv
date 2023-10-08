@@ -1,0 +1,1200 @@
+<ScreenCalc1>:
+    txt_lbl1: lbl1
+    txt_lbl2: lbl2
+    txt_lbl3: lbl3
+    txt_lbl4: lbl4
+
+#    BoxLayout:
+#        Button:
+#            text: 'Goto settings'
+#            on_press: root.manager.current = 'settings'
+#        Button:
+#            text: 'Quit'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 1
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: lbl1
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: '1'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: lbl2
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: '2'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: lbl3
+                size_hint: 0.75, 1
+                font_size: 100
+            Button:
+                text: '3'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: lbl4
+                size_hint: 0.75, 1
+                font_size: 100
+            Button:
+                text: '4'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: 'ms'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'mr'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'clc'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'del'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: '1'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '2'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '3'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '+'
+                font_size: 110
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: '4'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '5'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '6'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '-'
+                font_size: 110
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: '7'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '8'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '9'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '*'
+                font_size: 110
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: '.'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '='
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: '/'
+                font_size: 110
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 10
+            Button:
+                text: 'b1'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: 'b2'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: 'b3'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: 'menu'
+                font_size: 75
+                on_press: root.manager.current = 'menu'
+
+
+<ScreenCalc2>:
+
+    calc2_but_2: but_2
+    calc2_but_3: but_3
+    calc2_but_4: but_4
+    calc2_but_5: but_5
+    calc2_but_6: but_6
+    calc2_but_7: but_7
+    calc2_but_8: but_8
+    calc2_but_9: but_9
+    calc2_but_a: but_a
+    calc2_but_b: but_b
+    calc2_but_c: but_c
+    calc2_but_d: but_d
+    calc2_but_e: but_e
+    calc2_but_f: but_f
+    calc2_bit0:  bit_0
+    calc2_bit1:  bit_1
+    calc2_bit2:  bit_2
+    calc2_bit3:  bit_3
+    calc2_bit4:  bit_4
+    calc2_bit5:  bit_5
+    calc2_bit6:  bit_6
+    calc2_bit7:  bit_7
+    calc2_bit8:  bit_8
+    calc2_bit9:  bit_9
+    calc2_bit10:  bit_10
+    calc2_bit11:  bit_11
+    calc2_bit12:  bit_12
+    calc2_bit13:  bit_13
+    calc2_bit14:  bit_14
+    calc2_bit15:  bit_15
+    calc2_bit16:  bit_16
+    calc2_bit17:  bit_17
+    calc2_bit18:  bit_18
+    calc2_bit19:  bit_19
+    calc2_bit20:  bit_20
+    calc2_bit21:  bit_21
+    calc2_bit22:  bit_22
+    calc2_bit23:  bit_23
+    calc2_bit24:  bit_24
+    calc2_bit25:  bit_25
+    calc2_bit26:  bit_26
+    calc2_bit27:  bit_27
+    calc2_bit28:  bit_28
+    calc2_bit29:  bit_29
+    calc2_bit30:  bit_30
+    calc2_bit31:  bit_31
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 1
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl1
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'dec'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl2
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'hex'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl3
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'bin'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                text: '1'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_2
+                text: '2'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_3
+                text: '3'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_4
+                text: '4'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_5
+                text: '5'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_6
+                text: '6'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_7
+                text: '7'
+                font_size: 110
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                id: but_8
+                text: '8'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_9
+                text: '9'
+                font_size: 110
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_a
+                text: 'A'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_b
+                text: 'B'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_c
+                text: 'C'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_d
+                text: 'D'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_e
+                text: 'E'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+            Button:
+                id: but_f
+                text: 'F'
+                font_size: 110
+                disabled: True
+                on_press: root.but_pressed(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 10
+            Button:
+                text: '+'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: '-'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: '*'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: '/'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: '='
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 31
+                id: bit_31
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 30
+                id: bit_30
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 29
+                id: bit_29
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 28
+                id: bit_28
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 27
+                id: bit_27
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 26
+                id: bit_26
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 25
+                id: bit_25
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 24
+                id: bit_24
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 23
+                id: bit_23
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 22
+                id: bit_22
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 21
+                id: bit_21
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 20
+                id: bit_20
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 19
+                id: bit_19
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 18
+                id: bit_18
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 17
+                id: bit_17
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 16
+                id: bit_16
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 15
+                id: bit_15
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 14
+                id: bit_14
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 13
+                id: bit_13
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 12
+                id: bit_12
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 11
+                id: bit_11
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 10
+                id: bit_10
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 9
+                id: bit_9
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 8
+                id: bit_8
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 7
+                id: bit_7
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 6
+                id: bit_6
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 5
+                id: bit_5
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 4
+                id: bit_4
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 3
+                id: bit_3
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 2
+                id: bit_2
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 1
+                id: bit_1
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 0
+                id: bit_0
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 10
+            Button:
+                text: 'ms'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'mr'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'clc'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'del'
+                font_size: 110
+                on_press: root.but_pressed_func(self)                
+            Button:
+                text: ' bin\nmode'
+                font_size: 50
+                on_press: root.manager.current = 'calc2bin'
+            Button:
+                text: 'menu'
+                font_size: 65
+                on_press: root.manager.current = 'menu'
+
+
+<ScreenCalc2bin>:
+    calc2_txt1:  calc2_lbl1
+    calc2_txt2:  calc2_lbl2
+    calc2_txt3:  calc2_lbl3
+    calc2_bit0:  bit_0
+    calc2_bit1:  bit_1
+    calc2_bit2:  bit_2
+    calc2_bit3:  bit_3
+    calc2_bit4:  bit_4
+    calc2_bit5:  bit_5
+    calc2_bit6:  bit_6
+    calc2_bit7:  bit_7
+    calc2_bit8:  bit_8
+    calc2_bit9:  bit_9
+    calc2_bit10:  bit_10
+    calc2_bit11:  bit_11
+    calc2_bit12:  bit_12
+    calc2_bit13:  bit_13
+    calc2_bit14:  bit_14
+    calc2_bit15:  bit_15
+    calc2_bit16:  bit_16
+    calc2_bit17:  bit_17
+    calc2_bit18:  bit_18
+    calc2_bit19:  bit_19
+    calc2_bit20:  bit_20
+    calc2_bit21:  bit_21
+    calc2_bit22:  bit_22
+    calc2_bit23:  bit_23
+    calc2_bit24:  bit_24
+    calc2_bit25:  bit_25
+    calc2_bit26:  bit_26
+    calc2_bit27:  bit_27
+    calc2_bit28:  bit_28
+    calc2_bit29:  bit_29
+    calc2_bit30:  bit_30
+    calc2_bit31:  bit_31
+    calc2_bit32:  bit_32
+    calc2_bit33:  bit_33
+    calc2_bit34:  bit_34
+    calc2_bit35:  bit_35
+    calc2_bit36:  bit_36
+    calc2_bit37:  bit_37
+    calc2_bit38:  bit_38
+    calc2_bit39:  bit_39
+    calc2_bit40:  bit_40
+    calc2_bit41:  bit_41
+    calc2_bit42:  bit_42
+    calc2_bit43:  bit_43
+    calc2_bit44:  bit_44
+    calc2_bit45:  bit_45
+    calc2_bit46:  bit_46
+    calc2_bit47:  bit_47
+    calc2_bit48:  bit_48
+    calc2_bit49:  bit_49
+    calc2_bit50:  bit_50
+    calc2_bit51:  bit_51
+    calc2_bit52:  bit_52
+    calc2_bit53:  bit_53
+    calc2_bit54:  bit_54
+    calc2_bit55:  bit_55
+    calc2_bit56:  bit_56
+    calc2_bit57:  bit_57
+    calc2_bit58:  bit_58
+    calc2_bit59:  bit_59
+    calc2_bit60:  bit_60
+    calc2_bit61:  bit_61
+    calc2_bit62:  bit_62
+    calc2_bit63:  bit_63
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 1
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl1
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'dec'
+                size_hint: 0.25, 1
+                disabled: True
+                #on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl2
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'hex'
+                size_hint: 0.25, 1
+                disabled: True
+                #on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Label:
+                id: calc2_lbl3
+                font_size: 100
+                size_hint: 0.75, 1
+            Button:
+                text: 'bin'
+                size_hint: 0.25, 1
+                on_press: root.but_change_field(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 63
+                id: bit_63
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 62
+                id: bit_62
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 61
+                id: bit_61
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 60
+                id: bit_60
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 59
+                id: bit_59
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 58
+                id: bit_58
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 57
+                id: bit_57
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 56
+                id: bit_56
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 55
+                id: bit_55
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 54
+                id: bit_54
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 53
+                id: bit_53
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 52
+                id: bit_52
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 51
+                id: bit_51
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 50
+                id: bit_50
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 49
+                id: bit_49
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 48
+                id: bit_48
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 47
+                id: bit_47
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 46
+                id: bit_46
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 45
+                id: bit_45
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 44
+                id: bit_44
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 43
+                id: bit_43
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 42
+                id: bit_42
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 41
+                id: bit_41
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 40
+                id: bit_40
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 39
+                id: bit_39
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 38
+                id: bit_38
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 37
+                id: bit_37
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 36
+                id: bit_36
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 35
+                id: bit_35
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 34
+                id: bit_34
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 33
+                id: bit_33
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 32
+                id: bit_32
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 31
+                id: bit_31
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 30
+                id: bit_30
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 29
+                id: bit_29
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 28
+                id: bit_28
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 27
+                id: bit_27
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 26
+                id: bit_26
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 25
+                id: bit_25
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 24
+                id: bit_24
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 23
+                id: bit_23
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 22
+                id: bit_22
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 21
+                id: bit_21
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 20
+                id: bit_20
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 19
+                id: bit_19
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 18
+                id: bit_18
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 17
+                id: bit_17
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 16
+                id: bit_16
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 15
+                id: bit_15
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 14
+                id: bit_14
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 13
+                id: bit_13
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 12
+                id: bit_12
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 11
+                id: bit_11
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 10
+                id: bit_10
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 9
+                id: bit_9
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 8
+                id: bit_8
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 1
+            Button:
+                my_id: 7
+                id: bit_7
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 6
+                id: bit_6
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 5
+                id: bit_5
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 4
+                id: bit_4
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 3
+                id: bit_3
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 2
+                id: bit_2
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 1
+                id: bit_1
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+            Button:
+                my_id: 0
+                id: bit_0
+                text: '0'
+                font_size: 110
+                on_press: root.but_pressed_bin(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 10
+            Button:
+                text: 'ms'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'mr'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'clc'
+                font_size: 110
+                on_press: root.but_pressed_func(self)
+            Button:
+                text: 'del'
+                font_size: 110
+                on_press: root.but_pressed_func(self)                
+            Button:
+                text: ' bin\nmode'
+                font_size: 50
+                on_press: root.manager.current = 'calc2'
+            Button:
+                text: 'menu'
+                font_size: 65
+                on_press: root.manager.current = 'menu'
+
+
+<SettingsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            text: 'Go to calc1'
+            size_hint: 1, 0.2
+            on_press: root.manager.current = 'calc1'
+        Button:
+            text: 'Go to calc2'
+            size_hint: 1, 0.2
+            on_press: root.manager.current = 'calc2'
+        Label:
+            text: 'myCalc version 0.3'
+            size_hint: 1, 0.6
+
