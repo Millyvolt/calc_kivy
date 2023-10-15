@@ -185,7 +185,9 @@
 
 
 <ScreenCalc2>:
-
+    calc2_txt1:  calc2_lbl1
+    calc2_txt2:  calc2_lbl2
+    calc2_txt3:  calc2_lbl3
     calc2_but_2: but_2
     calc2_but_3: but_3
     calc2_but_4: but_4
@@ -266,8 +268,9 @@
             padding: 1
             Label:
                 id: calc2_lbl3
-                font_size: 100
+                font_size: 70
                 size_hint: 0.75, 1
+                halign: 'right'
             Button:
                 text: 'bin'
                 size_hint: 0.25, 1
@@ -617,9 +620,11 @@
                 font_size: 110
                 on_press: root.but_pressed_func(self)                
             Button:
-                text: ' bin\nmode'
+                text: '> bin\nmode'
                 font_size: 50
-                on_press: root.manager.current = 'calc2bin'
+                on_press: 
+                    root.manager.current = 'calc2bin'
+                    root.manager.transition.direction = 'right'
             Button:
                 text: 'menu'
                 font_size: 65
@@ -719,6 +724,7 @@
                 id: calc2_lbl2
                 font_size: 100
                 size_hint: 0.75, 1
+                halign: 'right'
             Button:
                 text: 'hex'
                 size_hint: 0.25, 1
@@ -732,6 +738,7 @@
                 id: calc2_lbl3
                 font_size: 100
                 size_hint: 0.75, 1
+                halign: 'right'
             Button:
                 text: 'bin'
                 size_hint: 0.25, 1
@@ -1173,9 +1180,11 @@
                 font_size: 110
                 on_press: root.but_pressed_func(self)                
             Button:
-                text: ' bin\nmode'
+                text: '< bin\nmode'
                 font_size: 50
-                on_press: root.manager.current = 'calc2'
+                on_press: 
+                    root.manager.current = 'calc2'
+                    root.manager.transition.direction = 'left'
             Button:
                 text: 'menu'
                 font_size: 65
