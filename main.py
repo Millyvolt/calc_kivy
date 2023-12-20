@@ -91,14 +91,13 @@ class ScreenCalc2(Screen):
 
     def but_pressed(self, instance):
 
-        global bin_expr_str
-        global hex_expr_str
-        str_tmp = ''
-        num_tmp = 0
+        global bin_expr_str, hex_expr_str
+        # global hex_expr_str
+        str_tmp, num_tmp = '', 0
+        # num_tmp = 0
 
         match self.txt_input_active:
             case 'dec': str_tmp = self.calc2_txt1.text
-            # case 'hex': str_tmp = self.calc2_txt2.text
             case 'hex': str_tmp = hex_expr_str
             case 'bin': str_tmp = bin_expr_str
 
@@ -114,14 +113,13 @@ class ScreenCalc2(Screen):
 
     def but_pressed_func(self, instance):
 
-        global mem_str
-        global bin_expr_str
-        global hex_expr_str
+        global mem_str, bin_expr_str, hex_expr_str
+        # global bin_expr_str
+        # global hex_expr_str
         str_tmp, num_tmp = '', 0
 
         match self.txt_input_active:
             case 'dec': str_tmp = self.calc2_txt1.text
-            # case 'hex': str_tmp = self.calc2_txt2.text
             case 'hex': str_tmp = hex_expr_str
             case 'bin': str_tmp = bin_expr_str
 
@@ -175,24 +173,14 @@ class ScreenCalc2(Screen):
 
     def on_pre_enter(self):
         global bin_expr_str
-        # global hex_expr_str
-
         if bin_expr_str == '':  return
-                                                # display current value :
-        self.calc2_txt3.text = bin_format_str(bin_expr_str)
-        self.calc2_txt3.font_size = font_txt_bin
         num_tmp = int(bin_expr_str, 2)
-        self.calc2_txt1.text = str(int(num_tmp))
-        self.calc2_txt2.text = hex(int(num_tmp))
+        self.refresh_num_fields(num_tmp)
 
 
     def refresh_num_fields(self, nmbr):
 
-        global font_txt_bin
-        global font_txt_hex
-        global bin_format_str
-        global bin_expr_str
-        global hex_expr_str
+        global font_txt_bin, font_txt_hex, bin_format_str, bin_expr_str, hex_expr_str
 
         bin_expr_str = bin(nmbr)
         self.calc2_txt3.text = bin_format_str(bin_expr_str)
@@ -309,15 +297,16 @@ class ScreenCalc2bin(Screen):
 
     def refresh_num_fields(self):
 
-        global font_txt_bin
-        global bin_format_str
-        global bin_expr_str
+        global font_txt_bin, bin_format_str, bin_expr_str, hex_expr_str
 
         self.calc2_txt3.text = bin_format_str(bin_expr_str)
         self.calc2_txt3.font_size = font_txt_bin
         num_tmp = int(bin_expr_str, 2)
         self.calc2_txt1.text = str(int(num_tmp))
-        self.calc2_txt2.text = hex(int(num_tmp))
+        # self.calc2_txt2.text = hex(int(num_tmp))
+        hex_expr_str = hex(int(num_tmp))
+        self.calc2_txt2.text = hex_format_str(hex_expr_str)
+        self.calc2_txt2.font_size = font_txt_hex
 
 
     def bin_write(self, bin_str):
